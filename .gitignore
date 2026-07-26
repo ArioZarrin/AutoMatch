@@ -1,0 +1,12 @@
+frontend/.nuxt/
+frontend/.output/
+frontend/dist
+frontend/node_modules/
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+*.py[cod]
+.DS_Store
+*.log

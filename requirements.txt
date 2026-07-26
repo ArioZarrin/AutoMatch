@@ -1,0 +1,8 @@
+aiohttp==3.14.3
+click==8.4.2
+openai==2.48.0
+psycopg[binary]==3.3.4
+python-dotenv==1.2.2
+rapidfuzz==3.14.5
+spacy==3.8.14
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl

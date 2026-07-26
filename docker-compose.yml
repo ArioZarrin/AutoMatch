@@ -1,0 +1,19 @@
+services:
+  automatch:
+    image: ghcr.io/ariozarrin/automatch:${AUTOMATCH_TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8080
+      RUNNING_IN_DOCKER: "1"
+      STATIC_DIR: /app/static
+    ports:
+      - "${HOST_PORT:-8080}:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

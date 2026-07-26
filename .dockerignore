@@ -1,0 +1,11 @@
+.env
+.git
+.gitignore
+.venv
+**/__pycache__
+**/*.pyc
+frontend/.nuxt
+frontend/.output
+frontend/dist
+frontend/node_modules
+*.log
