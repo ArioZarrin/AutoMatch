@@ -386,6 +386,17 @@ from `.env`; secrets are not built into the image.
 The same application is published for Linux `amd64` and `arm64` at
 `ghcr.io/ariozarrin/automatch`.
 
+For a private package, each approved user first authenticates with a GitHub personal
+access token that has `read:packages` permission:
+
+```bash
+export GHCR_TOKEN="your-token"
+echo "$GHCR_TOKEN" | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
+unset GHCR_TOKEN
+```
+
+Public packages can be pulled without this login step.
+
 ```bash
 docker pull ghcr.io/ariozarrin/automatch:latest
 docker run --name automatch --rm \
